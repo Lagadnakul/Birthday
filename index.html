@@ -52,17 +52,75 @@
     </div>
     <div id="root"></div>
     <script>
+      // Enhanced loading screen management
+      let loadingTimeout;
+      let reactLoaded = false;
+      
       // Hide loading screen when React loads
       window.addEventListener('load', () => {
-        setTimeout(() => {
-          const loading = document.getElementById('loading');
-          if (loading) {
-            loading.style.opacity = '0';
-            loading.style.transition = 'opacity 0.5s ease-out';
-            setTimeout(() => loading.remove(), 500);
+        // Set a timeout to show error if React doesn't load
+        loadingTimeout = setTimeout(() => {
+          if (!reactLoaded) {
+            const loading = document.getElementById('loading');
+            if (loading) {
+              loading.innerHTML = `
+                <div>
+                  <div class="spinner">⚠️</div>
+                  <div>Loading taking longer than expected...</div>
+                  <button onclick="location.reload()" style="
+                    background: rgba(255,255,255,0.2);
+                    border: 2px solid white;
+                    color: white;
+                    padding: 10px 20px;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    margin-top: 20px;
+                  ">Try Again</button>
+                </div>
+              `;
+            }
           }
-        }, 1000);
+        }, 5000); // Show error after 5 seconds
+        
+        // Normal loading behavior
+        setTimeout(() => {
+          if (!reactLoaded) {
+            const loading = document.getElementById('loading');
+            if (loading) {
+              loading.style.opacity = '0';
+              loading.style.transition = 'opacity 0.5s ease-out';
+              setTimeout(() => {
+                if (loading.parentNode) {
+                  loading.remove();
+                }
+              }, 500);
+            }
+            reactLoaded = true;
+            if (loadingTimeout) {
+              clearTimeout(loadingTimeout);
+            }
+          }
+        }, 2000); // Increased to 2 seconds for better loading experience
       });
+      
+      // Function to be called by React when it's ready
+      window.markReactLoaded = () => {
+        reactLoaded = true;
+        if (loadingTimeout) {
+          clearTimeout(loadingTimeout);
+        }
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.style.opacity = '0';
+          loading.style.transition = 'opacity 0.5s ease-out';
+          setTimeout(() => {
+            if (loading.parentNode) {
+              loading.remove();
+            }
+          }, 500);
+        }
+      };
     </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>

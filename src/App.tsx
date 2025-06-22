@@ -219,10 +219,10 @@ function App() {
         gl={{ 
           antialias: windowSize.width >= 768,
           alpha: true,
-          powerPreference: windowSize.width < 768 ? "default" : "high-performance",
-          pixelRatio: Math.min(window.devicePixelRatio, windowSize.width < 768 ? 1.5 : 2)
+          powerPreference: windowSize.width < 768 ? "default" : "high-performance"
         }}
         onCreated={({ gl, camera }) => {
+          gl.setPixelRatio(Math.min(window.devicePixelRatio, windowSize.width < 768 ? 1.5 : 2))
           gl.setClearColor('#000000', 0)
           
           if (windowSize.width >= 768) {
