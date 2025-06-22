@@ -29,9 +29,9 @@ This magical birthday surprise includes:
 
 ## 🎥 Demo
 
-🌐 **Live Demo**: [Happy Birthday Mansi](https://lagadnakul.github.io/birthday/)
+🌐 **Live Demo**: [Happy Birthday Mansi](https://lagadnakul.github.io/Birthday/)
 
-*Create your own birthday surprise by forking this repository!*
+*Your beautiful birthday surprise is now live!*
 
 ## 🚀 Getting Started
 
@@ -43,8 +43,8 @@ This magical birthday surprise includes:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Lagadnakul/birthday.git
-   cd birthday
+   git clone https://github.com/Lagadnakul/Birthday.git
+   cd Birthday
    ```
 
 2. **Install dependencies:**
@@ -213,7 +213,7 @@ This special birthday surprise was created with lots of love and care to celebra
 ## 🔗 Connect
 
 - **GitHub:** [@Lagadnakul](https://github.com/Lagadnakul)
-- **Project Link:** [https://github.com/Lagadnakul/birthday](https://github.com/Lagadnakul/birthday)
+- **Project Link:** [https://github.com/Lagadnakul/Birthday](https://github.com/Lagadnakul/Birthday)
 
 ---
 
