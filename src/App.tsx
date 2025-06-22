@@ -10,6 +10,11 @@ import { CuteCharacter } from './components/CuteCharacter'
 import { FlowerScene } from './components/FlowerScene'
 import { MessagePuzzle } from './components/MessagePuzzle'
 
+// Debug logging
+console.log('🎂 Birthday App: App.tsx loaded successfully');
+console.log('🎂 Birthday App: Three.js version:', THREE.REVISION);
+console.log('🎂 Birthday App: All imports loaded successfully');
+
 const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;

@@ -8,9 +8,12 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: false,
+    sourcemap: true,
     emptyOutDir: true,
     rollupOptions: {
+      input: {
+        main: './index.html'
+      },
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
@@ -19,5 +22,8 @@ export default defineConfig({
         }
       }
     }
+  },
+  define: {
+    global: 'globalThis',
   }
 })
