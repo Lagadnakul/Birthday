@@ -89,10 +89,10 @@ try {
       <div>
         <h1>🎂 Birthday App Loading Error</h1>
         <p>Something went wrong while loading your special surprise!</p>
-        <p style="font-size: 0.8em; opacity: 0.8; max-width: 500px;">Error: ${error}</p>
+        <p style="font-size: 0.8em; opacity: 0.8; max-width: 500px;">Error: ${error instanceof Error ? error.message : String(error)}</p>
         <details style="margin: 20px 0; text-align: left;">
           <summary style="cursor: pointer;">🔍 Technical Details</summary>
-          <pre style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 5px; overflow: auto; max-height: 200px; font-size: 0.7em;">${error.stack || error.toString()}</pre>
+          <pre style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 5px; overflow: auto; max-height: 200px; font-size: 0.7em;">${error instanceof Error ? error.stack : String(error)}</pre>
         </details>
         <button onclick="location.reload()" style="
           background: rgba(255,255,255,0.2);
