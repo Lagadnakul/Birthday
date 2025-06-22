@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Create Birthday Repository</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff69b4, #ffc0cb);
+            margin: 0;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        .step {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            text-align: left;
+        }
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        .highlight {
+            background: rgba(255, 255, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎂 Create Birthday Repository</h1>
+        <p>Let's create your GitHub repository for the Birthday App!</p>
+        
+        <div class="step">
+            <h3>📝 Step 1: Create Repository</h3>
+            <p>Click the button below to go to GitHub and create a new repository:</p>
+            <p><strong>Repository name:</strong> <span class="highlight">birthday</span></p>
+            <p><strong>Description:</strong> <span class="highlight">🎂 Happy Birthday Mansi! Beautiful interactive birthday surprise</span></p>
+            <p><strong>Visibility:</strong> <span class="highlight">Public</span></p>
+            <p><strong>⚠️ Important:</strong> DON'T initialize with README, .gitignore, or license</p>
+            <a href="https://github.com/new" class="btn" target="_blank">🚀 Create Repository on GitHub</a>
+        </div>
+        
+        <div class="step">
+            <h3>🔗 Step 2: Your Repository URLs</h3>
+            <p><strong>Repository:</strong> https://github.com/Lagadnakul/birthday</p>
+            <p><strong>Live Site:</strong> https://lagadnakul.github.io/birthday/</p>
+        </div>
+        
+        <div class="step">
+            <h3>⚡ Step 3: Run Setup Script</h3>
+            <p>After creating the repository, run this script in your terminal:</p>
+            <p><code style="background: rgba(0,0,0,0.3); padding: 5px 10px; border-radius: 5px;">create-birthday-repo.bat</code></p>
+        </div>
+        
+        <div class="step">
+            <h3>🎉 Step 4: Enable GitHub Pages</h3>
+            <p>The script will automatically open the Pages settings, or go manually to:</p>
+            <a href="https://github.com/Lagadnakul/birthday/settings/pages" class="btn" target="_blank">⚙️ GitHub Pages Settings</a>
+            <p>Set Source to: <span class="highlight">GitHub Actions</span></p>
+        </div>
+        
+        <hr style="margin: 30px 0; border: 1px solid rgba(255,255,255,0.3);">
+        
+        <h2>🌐 Final Result</h2>
+        <p>Your Birthday App will be live at:</p>
+        <p style="font-size: 1.3em; font-weight: bold;">https://lagadnakul.github.io/birthday/</p>
+        <p>Share this link with friends! 💖</p>
+    </div>
+    
+    <script>
+        // Auto-open GitHub new repository page after 5 seconds
+        setTimeout(() => {
+            if (confirm("Ready to create the repository? This will open GitHub in a new tab.")) {
+                window.open('https://github.com/new', '_blank');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
